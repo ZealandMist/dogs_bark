@@ -1,0 +1,11 @@
+<%= simple_form_for @dog do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description, as: :text %>
+  <%= f.file_field :images, multiple: true %><br>
+
+  <% if @dog.images.any? %>
+    <%= image_tag @dog.images.last %>
+  <% end %>
+
+  <%= f.button :submit %>
+<% end %>

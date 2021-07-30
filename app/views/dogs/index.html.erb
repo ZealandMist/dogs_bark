@@ -1,0 +1,4 @@
+<%= render partial: 'thumbnail', collection: @dogs, as: :dog %>
+<%= image_tag('/assets/ad.jpg') %>
+<%= link_to 'Next 5', dogs_path(page: @page + 1) %>
+<%= link_to 'Last 5', dogs_path(page: @page - 1) %>
